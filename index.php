@@ -5,7 +5,7 @@ ini_set('error_log', 'php_error.log');
 
 echo "<h1>Wetter, Wetter, Wetter!</h1>";
 try {
-    $file_db = new PDO('sqlite:../measuranddb');
+    $file_db = new PDO('sqlite:measuranddb');
     if (!$file_db) error_log("");
 
     $result = $file_db->query('SELECT * FROM measurand ORDER BY id DESC');
